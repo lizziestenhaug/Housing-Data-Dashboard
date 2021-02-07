@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Theme The Band</title>
+   <!-- Principal Menu Theme used from www.w3schools.com -->
+  <title>Housing Data</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -33,12 +34,11 @@
         <li><a href="#resources">RESOURCES</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">VIZUALS
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">VISUALS
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="visual1.html">VISUAL1</a></li>
-            <li><a href="visual2.html">VISUAL2</a></li>
-            <li><a href="visual3.html">VISUAL3</a></li>
+            <li><a href="homevalue.html">HOME VALUES</a></li>
+            <li><a href="inventory.html">INVENTORY</a></li>
             <li><a href="map.html">MAP</a></li>
           </ul>
         </li>
@@ -89,23 +89,30 @@
 
 <div id="houses" class="container text-center">
   <h3>HOUSE INVENTORY AND SALES PRICES</h3>
-  <p> We are going to write some information about this poject here!! We are too busy working in our visualizations right now  .</p>
+  <p>Nationally, home inventory levels have hit historic lows. Booming demand for US homes have driven the number of properties available for sale to a steep decline. This in turn has seen some areas have drastic price increases in home value due to the high demand..</p>
+  <p>Home Inventory and Sell Price By Region</p>
+  <p>Which Region have seen the largest decrease in inventory?</p>
+  <p>What states have the biggest increase in sale price?</p>
   <br>
   <div class="row">
+
     <div class="col-sm-4">
-      <p class="text-center"><strong>Home Inventory</strong></p><br>
+      <p class="text-center"><strong>Home Values</strong></p><br>
       <a data-toggle="collapse">
-        
-        <img src="./images/inventory2.png" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Home Value</strong></p><br>
-      <a data-toggle="collapse">
+        <a href="homevalue.html"a>
         <img src="./images/homevalue.png" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
 
     </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Inventory</strong></p><br>
+      <a data-toggle="collapse">
+        <a href="inventory.html" a>
+        <img src="./images/inventory2.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+    </div>
+
     <div class="col-sm-4">
       <p class="text-center"><strong>Maps</strong></p><br>
       <a data-toggle="collapse">
@@ -124,10 +131,19 @@
     <h3 class="text-center" >RESOURCES </h3>
   
     <ul class="list-group">
-      <li class="list-group-item"><a href="https://www.quandl.com/databases/ZILLOW/data" data-toggle="tooltip" title="Visit w3schools">https://www.quandl.com/databases/ZILLOW/data</a></p>  <span class="label label-danger"></span></li>
-      <li class="list-group-item"><a href="https://www.zillow.com/research/data/" data-toggle="tooltip" title="Visit w3schools">https://www.zillow.com/research/data/</a></p>  <span class="label label-danger"></span></li>
-      <li class="list-group-item">Place here another source </li> 
+      <li class="list-group-item"><a href="https://www.quandl.com/databases/ZILLOW/data" data-toggle="tooltip" title="Visit Page">https://www.quandl.com/databases/ZILLOW/data</a></p>  <span class="label label-danger"></span></li>
+      <li class="list-group-item"><a href="https://www.zillow.com/research/data/" data-toggle="tooltip" title="Visit Page">https://www.zillow.com/research/data/</a></p>  <span class="label label-danger"></span></li>
     </ul>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div id="zillow-large-search-box-widget-container" style="width:432px;overflow:hidden;background-color:#e7f1fd;color:#555; font: normal normal normal 13px verdana,arial,sans-serif;line-height:13px;margin:0 auto;padding:0;text-align:center;border:1px solid #ADCFFF;letter-spacing:0;text-transform:none;"><h2 style="color:#d61;text-align:left;font-size:20px;line-height:20px;font-weight:normal;float:left;width:200px;margin-left:10px;margin-top:5px;letter-spacing:0;text-transform:none;">Find Homes</h2><div style="float:right;"><a href="https://www.zillow.com/" target="_blank" rel="nofollow"><img alt="Zillow Real Estate Information" style="border:0;" src="https://www.zillow.com/widgets/GetVersionedResource.htm?path=%2Fstatic%2Fimages%2Fpowered-by-zillow.gif"></img></a></div><iframe scrolling="no" src="https://www.zillow.com/widgets/search/LargeSearchBoxWidget.htm?did=zillow-large-search-box-iframe-widget&type=iframe&rgname=Minnesota&shvi=yes" width="430" frameborder="0" height="400"></iframe><table id="zillow-tnc-widget-footer-links" width="100%" style="font: normal normal normal 10px verdana,arial,sans-serif;text-align:left;line-height:12px;margin:10px 5px;padding:0;border-spacing:0;border-collapse:collapse;"><tbody style="margin:0;padding:0;"><tr style="margin:0;padding:0;"><td style="font-weight:bold;font-size:10px;color:#555;text-align:left;margin:0;padding:0;">QUICK LINKS:</td></tr><tr style="margin:0;padding:0;"><td style="margin:0;padding:0;"><span id="widgetFooterLink" class="regionBasedLink"><a href="https://www.zillow.com/mn/" target="_blank" rel="nofollow" style="color:#36b;font-family:verdana,arial,sans-serif;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;"><span class="region">Minnesota</span> Real Estate Listing</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/mortgage-rates/" target="_blank" rel="nofollow" style="color:#36b;font-family:verdana,arial,sans-serif;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Mortgage Rates</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/refinance/" target="_blank" rel="nofollow" style="color:#36b;font-family:verdana,arial,sans-serif;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Refinancing</a></span></td></tr><tr style="margin:0;padding:0;"><td style="margin:0;padding:0;"><span id="widgetFooterLink" class="regionBasedLink"><a href="https://www.zillow.com/mn/foreclosures/" target="_blank" rel="nofollow" style="color:#36b;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;"><span class="region">Minnesota</span> Foreclosures</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/mortgage-calculator/" target="_blank" rel="nofollow" style="color:#36b;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Mortgage Calculators</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/mortgage-rates/" target="_blank" rel="nofollow" style="color:#36b;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Purchase Loans</a></span></td></tr></tbody></table></div>
+        <h5>© Zillow, Inc., 2006-2016. Use is subject to 
+      <a href="https://www.zillow.com/z/corp/terms/"> Terms of Use</a>
+          </h5>
+      <a href="https://www.zillow.com/z/zestimate/">What's a Zestimate?</a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -139,7 +155,7 @@
   <div class="row">
     <div class="col-md-4">
       <p><em>Lizzie Stenhaug </em></p>  
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: lizziestenhaug@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: estenhaug@gmail.com</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>Minnesota, US</p>
     </div>
 
@@ -158,7 +174,7 @@
     <div class="col-md-4">
       <p></p>
       <p><em>Ludmila García</em></p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: estenhaug@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: ludmilagd@gmail.com</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>Minnesota, US</p>
     </div>
 
@@ -171,10 +187,8 @@
     </div> 
   </div>
   <br>
- 
 
 </div>
-
 
 
 <!-- Footer -->
@@ -203,7 +217,7 @@ $(document).ready(function(){
       var hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+     
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){

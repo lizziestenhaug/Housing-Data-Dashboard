@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Principal Menu Theme used from www.w3schools.com -->
+  <title>Housing Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    
+      <a class="navbar-brand" href="index.html">Housing Data</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">VISUALS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="homevalue.html">HOME VALUES</a></li>
+            <li><a href="inventory.html">INVENTORY</a></li>
+            <li><a href="map.html">MAP</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+
+    <head>
+<!--Plotly.js-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+    <body>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      
+      <div class="showcase__section" id="bubble">
+        <div class="spacer --small"></div>
+        <div id="bubbleplots">
+          <div class="bubbleplot" data-num="1">
+            <div class="plot" id="plotdiv"></div>
+            <p> For-Sale Inventory is the count of unique listings that were active at any time in a given month.</p> 
+            <div class="control-row">
+                Region/State: <select class="regiondata">
+              </select>
+            </div>
+          </div>
+
+            <div class="bubbleplot" data-num="2">
+            <div class="secondplot" id="plotdiv"></div>
+            <div class="control-row">
+                  Region/State: <select class="secondregiondata">
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="bubbleplot" data-num="3">
+        <div class="thirdplot" id="plotdiv"></div>
+        <div class="control-row">
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div id="#r"></div>
+    </div>
+    <div class="col-md-5">
+      <div id="#"></div>
+    </div>
+  </div>
+  <p> </p> 
+  <p> </p> 
+  <p> </p> 
+ 
+  <div class="showcase__section" id="bubble">
+  <div class="showcase__section" id="bubble">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div id="bar"></div>
+      <p>Newly Pending Listings: The count of listings that changed from for-sale to pending status on Zillow.com in a given time period. </p> 
+    </div>
+  </div>
+
+
+</div>
+
+
+
+</body>
+
+<script src="./assets/js/inventory.js"></script>
+<script src="./assets/data/inventario.csv"></script>
+
+</body>
+</html>
