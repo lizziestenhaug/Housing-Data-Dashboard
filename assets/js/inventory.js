@@ -5,25 +5,26 @@ Plotly.d3.csv("./assets/data/inventario.csv", function(err, rows){
         return rows.map(function(row) { return row[key]; });
     }
 
-var allregionsNames = unpack(rows, 'RegionName').sort(),
+var allregionsNames = unpack(rows, 'RegionName').sort(), // Regions names
 
 
 //var allregionsNames = allregionsName.sort((a, b) => b.RegionName - a.RegionName);
 
-    allYear = unpack(rows, 'Attribute'),
-    inv = unpack(rows, 'Value'),
-    regions = [],
+    allYear = unpack(rows, 'Attribute'), // date
+    inv = unpack(rows, 'Value'), //home values
 
-    currentInv = [],
-    currentYear = [];
-    console.log(allregionsNames)
-  for (var i = 0; i < allregionsNames.length; i++ ){
+    regions = [],
+    currentInv = [], //stored here current values filtered for the graph -- inventory
+    currentYear = []; //stored here current values filtered for the graph -- date
+
+  
+  for (var i = 0; i < allregionsNames.length; i++ ){ // get unique region names and store in regions
     if (regions.indexOf(allregionsNames[i]) === -1 ){
       regions.push(allregionsNames[i]);
     }
   }
-  
-  function regionData(regiontoreturn) {
+   
+  function regionData(regiontoreturn) { // filter the data with the first parameter
     currentInv = [];
     currentYear = [];
     for (var i = 0 ; i < allregionsNames.length ; i++){
@@ -34,7 +35,7 @@ var allregionsNames = unpack(rows, 'RegionName').sort(),
     } 
   };
 
-  function SecondregionData(secondregionreturn) {
+  function SecondregionData(secondregionreturn) { // filter the data with the second parameter
     currentInv = [];
     currentYear = [];
     for (var i = 0 ; i < allregionsNames.length ; i++){
@@ -45,10 +46,10 @@ var allregionsNames = unpack(rows, 'RegionName').sort(),
     } 
   };
 
-// Default Country Data
+// Default REgions Data
 setBubblePlot('Atlanta, GA', 'Atlanta, GA');
   
-function setBubblePlot(regiontoreturn, secondregionreturn) {
+function setBubblePlot(regiontoreturn, secondregionreturn) { // set the bubbles for the line
     regionData(regiontoreturn);  
    
     //line graph
@@ -85,34 +86,36 @@ function setBubblePlot(regiontoreturn, secondregionreturn) {
 
      //line plot
     var data = [trace1,trace2];
+
     var layout = {
-      title: 'House Inventory per Month over the Last Three Years <br>'+ regiontoreturn +' and '+secondregionreturn,
-      titlefont: {
-        size: 16,
-        color: '#ca1111'
-      },
-      xaxis: {
-       
-        titlefont: {
-          size: 16,
-          color: '#ca1111'
-        },
-        tickfont: {
-          size: 14,
-          color: 'rgb(107, 107, 107)'
-        }},
-      yaxis: {
-        title: 'Total Inventory',
-        titlefont: {
-          size: 16,
-          color: '#ca1111'
-        },
-        tickfont: {
-          size: 14,
-          color: 'rgb(107, 107, 107)'
-        }
-      },
-    };
+                  title: 'House Inventory per Month over the Last Three Years <br>'+ regiontoreturn +' and '+secondregionreturn,
+                  titlefont: {
+                    size: 16,
+                    color: '#ca1111'
+                  },
+                  xaxis: {
+                  
+                    titlefont: {
+                      size: 16,
+                      color: '#ca1111'
+                    },
+                    tickfont: {
+                      size: 14,
+                      color: 'rgb(107, 107, 107)'
+                    }},
+                  yaxis: {
+                    title: 'Total Inventory',
+                    titlefont: {
+                      size: 16,
+                      color: '#ca1111'
+                    },
+                    tickfont: {
+                      size: 14,
+                      color: 'rgb(107, 107, 107)'
+                    }
+                  },
+                };
+
     Plotly.newPlot('plotdiv', data, layout);
 
 };
@@ -122,20 +125,20 @@ var innerContainer = document.querySelector('[data-num="1"'),
     countrySelector = innerContainer.querySelector('.regiondata');
 
 
-function assignOptions(textArray, selector) {
+/*function assignOptions(textArray, selector) {
   for (var i = 0; i < textArray.length;  i++) {
       var currentOption = document.createElement('option');
       currentOption.text = textArray[i];
       selector.appendChild(currentOption);
   }
 }
-assignOptions(regions, countrySelector);
+assignOptions(regions, countrySelector);*/
 
 function updateregiondata(){
    setBubblePlot(countrySelector.value,secondregionSelector.value);
 }
   
-countrySelector.addEventListener('change', updateregiondata, false);
+countrySelector.addEventListener('change', updateregiondata, false); // Event listeter for thte first group of data
 
 
 var secondinnerContainer = document.querySelector('[data-num="2"'),
@@ -148,11 +151,13 @@ function updateSecondregiondata(){
     setBubblePlot(countrySelector.value,secondregionSelector.value);
 }
   
-secondregionSelector.addEventListener('change', updateSecondregiondata, false);
+secondregionSelector.addEventListener('change', updateSecondregiondata, false); // Event listeter for thte second group of data
 
 });
 
 
+
+///// Pending Graph from here
 Plotly.d3.csv("./assets/data/newToPending.csv", function(err, rows){
 
   function unpack(rows, key) {

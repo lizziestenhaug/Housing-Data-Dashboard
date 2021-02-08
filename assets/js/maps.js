@@ -1112,6 +1112,8 @@ map.on('load', function () {
 
                 const censusFeatures = censusData._data.features;
                 var correctFeature = censusFeatures.find(x => x.properties.State_x === hoveredStateId);
+                console.log(hoveredStateId)
+                console.log(correctFeature)
 
                 var g = parseInt(hoveredStateId);
                 var gString = g - 3;
