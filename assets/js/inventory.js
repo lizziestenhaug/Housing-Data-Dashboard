@@ -1,3 +1,4 @@
+//samples code used from https://plotly.com/
 Plotly.d3.csv("./assets/data/inventario.csv", function(err, rows){
 
     function unpack(rows, key) {
