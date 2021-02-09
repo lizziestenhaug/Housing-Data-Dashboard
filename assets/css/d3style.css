@@ -1,0 +1,124 @@
+.aText {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-anchor: middle;
+  }
+  
+  .active {
+    font-weight: bold;
+    fill: #000;
+    transition: fill 0.3s ease-out;
+    text-anchor: middle;
+  }
+  
+  .inactive {
+    font-weight: lighter;
+    fill: #c9c9c9;
+    transition: fill 0.3s ease-out;
+    text-anchor: middle;
+  }
+  
+  .inactive:hover {
+    fill: #89bdd3;
+    cursor: pointer;
+  }
+  
+  /* font size dependent on radius, see app.js */
+  .stateText {
+    font-family: sans-serif;
+    fill: rgb(22, 22, 22);
+    text-anchor: middle;
+  }
+  
+  .stateCircle {
+    fill: #89bdd3;
+    stroke: #e3e3e3;
+  }
+  
+  .chart {
+    display: block;
+    margin: 0;
+  }
+  
+  .d3-tip {
+    padding: 6px;
+    font-size: 12px;
+    line-height: 1;
+    line-height: 1.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: capitalize;
+    background: orange;
+    border-radius: 4px;
+  }
+  
+  /* Mobile Rules */
+  @media screen and (max-width: 530px) {
+    .stateText {
+      display: none;
+    }
+  
+    .aText {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .aText {
+      font-size: 13px;
+    }
+  }
+
+  .d3-tip {
+    line-height: 1;
+    padding: 6px;
+    background: #89bdd3;
+    color: rgb(29, 12, 107);
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+ /* Creates a small triangle extender for the tooltip */
+ .d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    text-transform: capitalize;
+    width: 100%;
+    line-height: 1;
+    color: orange;
+    content: "\25BC";
+    position: absolute;
+    text-align: end;
+  }
+
+  .d3-tip.n:after {
+    margin: -2px 0 0 0;
+    top: 100%;
+    left: 0;
+  }
+
+  .myCircle:hover {
+    stroke: black;
+  }
+
+  .d3-tip2 {
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 6px;
+    background: #c91313;
+    color: rgb(250, 242, 242);
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .d3-tip3 {
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 6px;
+    background: #2513c9;
+    color: rgb(250, 242, 242);
+    border-radius: 4px;
+    font-size: 12px;
+  }
