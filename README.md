@@ -7,7 +7,7 @@ What states have the biggest increase in sale price?
 
 Explore our interactive dashboard at the link below:
 
-https://lizziestenhaug.github.io/Project-2-Group-8/
+https://lizziestenhaug.github.io/Housing-Data-Dashboard/homevalue.html
 
 
 Development Team
